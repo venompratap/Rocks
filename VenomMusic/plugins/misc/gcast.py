@@ -15,7 +15,7 @@ from VenomMusic.utils.database import (
 )
 from VenomMusic.utils.decorators.language import language
 from VenomMusic.utils.formatters import alpha_to_int
-from config import adminlist, MAIN_OWNER, SUPPORT_CHAT
+from config import adminlist, OWNER_ID, SUPPORT_CHAT
 
 IS_BROADCASTING = False
 
