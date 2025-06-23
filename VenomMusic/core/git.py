@@ -1,5 +1,6 @@
 from git import Repo, InvalidGitRepositoryError
 import os
+import config
 
 def git():
     REPO_LINK = config.UPSTREAM_REPO
