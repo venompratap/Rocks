@@ -15,7 +15,7 @@ from VenomMusic.utils.database import (
 )
 from VenomMusic.utils.decorators.language import language
 from VenomMusic.utils.formatters import alpha_to_int
-from config import adminlist, OWNER_ID, SUPPORT_CHAT
+from config import adminlist, OWNER_ID, SUPPORT_GROUP
 
 IS_BROADCASTING = False
 
@@ -23,9 +23,9 @@ IS_BROADCASTING = False
 @app.on_message(filters.command("gcast") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
-    if message.from_user.id != MAIN_OWNER:
+    if message.from_user.id != OWNER_ID:
         return await message.reply_text(
-            f"» 🚀 Wᴀɴᴛ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴏᴡɴ ᴍᴇssᴀɢᴇs?\n\nUɴʟᴏᴄᴋ ᴇxᴄʟᴜsɪᴠᴇ ᴀᴄᴄᴇss ᴡɪᴛʜ ᴏᴜʀ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴘʟᴀɴ!\n Jᴏɪɴ [ᴠᴇɴᴏᴍ ᴄʜᴀᴛ]({SUPPORT_CHAT}) ᴏʀ DM @VENOM_PRATAP ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ !"
+            f"» 🚀 Wᴀɴᴛ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴏᴡɴ ᴍᴇssᴀɢᴇs?\n\nUɴʟᴏᴄᴋ ᴇxᴄʟᴜsɪᴠᴇ ᴀᴄᴄᴇss ᴡɪᴛʜ ᴏᴜʀ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴘʟᴀɴ!\n Jᴏɪɴ [ᴠᴇɴᴏᴍ ᴄʜᴀᴛ]({SUPPORT_GROUP}) ᴏʀ DM @VENOM_PRATAP ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ !"
         )
 
     global IS_BROADCASTING
