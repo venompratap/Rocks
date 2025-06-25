@@ -92,7 +92,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/venompratap/VenomMusic && cd AviaxMusic
+   git clone https://github.com/venompratap/VenomMusic && cd VenomMusic
    ```
 6. **Install Requirements**
    ```bash
